@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Finished clearing defualt style*/
+:root {
+	--white: #fffbfb;
+	--grey: #f0eef1;
+	--black: #050505;
+	--red: #ff7070;
+	--light-green: #9fff9c;
+	--light-red: #ff9c9c;
+	--border-radius: 8px;
+	--shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+body{
+	background:#F5F5F5;
+}
+@import url(https://fonts.googleapis.com/css2?family=Poppins);
+.Top {
+	width: 100%;
+    display: flex;
+	justify-content: space-around;
+    align-items: center;
+	background-color: white;
+	height: 7rem;
+	margin-bottom: 3rem;
+
+}
+.Top h1{
+	font-size: 40px;
+	font-weight: 400;;
+	font-family: 'Poppins',sans-serif;
+	
+}
+.Top button{
+	border-radius: 5px;
+	border:none;
+	font-size: 20px;
+	width:8rem;
+	height:3rem;
+	
+}
+.formWindow{
+	position: fixed;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	padding: 5px;
+	border-radius: var(--border-radius);
+	background-color: var(--grey);
+	text-align: center;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 0.2s ease-in-out;
+	font-family: 'Poppins',sans-serif;
+	
+}
+.formWindow.active{
+	transform: translate(-50%,-50%) scale(1);
+}
+
+.formHeader h1{
+	
+	text-align: center;
+	margin: 20px ;
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.readStatus {
+	display: inline-block;
+	font-size: 20px;
+}
+.readStatus input{
+	
+	width: 20px;
+	height: 20px;
+	margin-top: 4px;
+	accent-color: white;
+
+}
+input{
+	border-radius: 5px;
+	border: none;	
+	height:40px;
+	margin:15px;
+	outline: none;
+}
+.submitButtonContainer{
+	margin-top: 10px;
+	text-align: center;
+}
+.submitButton{
+	height: 40px;
+	width: 100px;
+	border-radius: 10px;
+	border: none;
+	margin-bottom: 15px;
+	background-color: var(--light-green);
+}
+.library{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap:10px
+}
+.book{
+	white-space:pre;
+	text-align: center;
+	border-radius: 10px;
+	padding:10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: var(--shadow);
+	z-index: 10;
+	background-color: white;
+	font-family: 'Poppins',sans-serif;
+	align-items: center;
+	gap: 15px;
+	
+}
+#readStatusChange{
+	background-color:var(--light-red);
+	border-radius: 5px;
+	border: none;
+	width:7rem;
+	height: 2rem;
+	
+}
+#readStatusChange.active{
+	background-color: var(--light-green)
+	
+}
+.rbutton{
+	border-radius: 5px;
+	border: none;
+	width:7rem;
+	height: 2rem;
+}
+#container{
+	opacity: 0;
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom: 0;
+	background: Gray;
+	pointer-events: none;
+	transition: 200ms ease-in-out;
+}
+#container.active{
+	opacity: 0.5;
+	pointer-events: all;
+}

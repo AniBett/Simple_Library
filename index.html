@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Library</title>
+    <script src="library.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Top">
+        <h1>Simple Library</h1>
+        <button type="button" class="buttonAdd">Add Book</button>
+    </div>
+    <div class="library"></div>
+    <div id="output-box"></div>
+    <form class="formWindow">
+            <div class="formHeader">
+                <h1 class="formTitle">Add Book</h1>
+                
+            </div>
+            <div>
+             
+              <input type="text" name="book_title" id="book_title" required>
+            </div>
+            <div>
+              
+              <input type="text" name="author_name" id="author_name" required>
+            </div>
+            <div>
+              
+              <input type="number" name="page_count" id="page_count" required>
+            </div>
+           
+            <div class="readStatus">
+                <label for="read_ind">Read?</label>
+                <input type="checkbox" name="read_ind" id="read_ind">
+            </div>
+            <div class="submitButtonContainer">
+                <button type="submit" class="submitButton">Submit</button>
+           </div>
+          </form>
+        
+        <div id="container">
+        </div>
+     
+ 
+      
+</body>
+</html>
